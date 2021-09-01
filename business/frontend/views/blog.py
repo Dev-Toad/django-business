@@ -1,4 +1,10 @@
 from django.shortcuts import render, HttpResponse
+from ...blog.models import Blog
 
 def listBlog(request):
-    return render(request, "business/storefront/blog/list.html")
+    blogs = Blog.objects.all()
+    return render(
+        request, 
+        "business/storefront/blog/list.html",
+        {'blogs': blogs}
+    )

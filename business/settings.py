@@ -26,6 +26,7 @@ INSTALLED_APPS = [
     #'business.core',
     'business.frontend',
     'business.service',
+    'business.blog',
 ]
 
 MIDDLEWARE = [
